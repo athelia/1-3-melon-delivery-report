@@ -1,3 +1,25 @@
+def print_melon_report(file, day=1):
+    """Print the melon report in a human readable format."""
+    
+    print("Day {}".format(day))
+
+    file = open(file)
+    for line in file:
+        line = line.rstrip()
+        words = line.split('|')
+
+        melon = words[0]
+        count = words[1]
+        amount = words[2]
+
+        print("Delivered {} {}s for total of ${}".format(count,melon,amount))
+    file.close()
+
+print_melon_report(file="um-deliveries-20140519.txt", day=1)
+print_melon_report(file="um-deliveries-20140520.txt", day=2)
+print_melon_report(file="um-deliveries-20140521.txt", day=3)
+
+"""
 # prints the day
 print("Day 1")
 # opens the file which is in the same directory
@@ -52,3 +74,4 @@ for line in the_file:
     print("Delivered {} {}s for total of ${}".format(
         count, melon, amount))
 the_file.close()
+"""
