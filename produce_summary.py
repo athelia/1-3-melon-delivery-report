@@ -12,7 +12,8 @@ def print_melon_report(file, day=1):
         count = words[1]
         amount = words[2]
 
-        print("Delivered {} {}s for total of ${}".format(count,melon,amount))
+        print("Delivered {} {}s for total of ${}".format(
+            count,melon,amount))
     file.close()
 
 print_melon_report(file="um-deliveries-20140519.txt", day=1)
